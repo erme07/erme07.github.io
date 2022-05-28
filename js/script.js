@@ -79,7 +79,7 @@ function filename(){
 	if(nombre_archivo === 'contacto.html'){
     barraMenu.classList.add('select-contacto');
   }
-  if(nombre_archivo === 'index.html' || rutaAbsoluta === 'https://erme07.github.io'){
+  if(nombre_archivo === 'index.html' || self.location.href === 'https://erme07.github.io'){
     barraMenu.classList.add('select-inicio');
   }
   if(nombre_archivo === 'noticias.html'){
