@@ -4,13 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	
+	<link rel="icon" href="img/favicon.png">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
 	
 	<script src="https://kit.fontawesome.com/768709101c.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="css/estilos.css">
+
 	<title>ZonaGeek</title>
 </head>
 <body>
@@ -19,24 +20,28 @@
 			<div class="logo">
 				<img src="img/zonageek-logo.png">
 			</div>
-			<!-- Pendiente: barra de busqueda-->
-			<div style="height:48px;">
+			<div class="barra-container">
 				<nav class="barra-navegacion">
 					<div class="btn cerrar-menu">
 						<i class="fas fa-times close-btn"></i>
 					</div>
 					<div class="logo-sticky">
-						<img src="img/zonageek-logo-min.png">
+						<a href="index.html"><img src="img/zonageek-logo-min.png"></a>
 					</div>
 					<ul class="menu">
-						<li><a href="#">Inicio</a></li>
-						<li><a href="#">Noticias</a></li>
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="noticias.html">Noticias</a></li>
 						<li><a href="#">Reseñas</a></li>
 						<li><a href="#">Redactores</a></li>
-						<li><a href="#">Contacto</a></li>
+						<li><a href="contacto.html">Contacto</a></li>
 					</ul>
-					<!-- Pendiente: selector de modo oscuro-->
-					<div class="modo-oscuro">apagar</div>
+
+					<div class="modo-oscuro">
+						<label class="switch">
+							<input type="checkbox" id="slider" checked>
+							<span class="slider"></span>
+						</label>
+					</div>
 					<div class="btn abrir-menu">
 						<i class="fas fa-bars menu-btn"></i>
 					</div>
@@ -50,34 +55,43 @@
 			<article class="item-a">
 				<img src="img/loki-season2.jpg" alt="">
 				<div class="titular">
-					<h3>La Segunda Temporada De Loki Está Lista Para Comenzar A Rodarse En El Mes De Junio</h3>
+					<h3><a href="articulo.html">La Segunda Temporada De Loki Está Lista Para Comenzar A Rodarse En El Mes De Junio</a></h3>
 				</div>
+				<svg class="reseña-porcentaje" width="80" height="80">
+					<circle r="30" cx="40" cy="40" class="track"></circle>
+					<text x="40" y="47" >7.5</text>
+					<circle r="30" cx="40" cy="40" class="progress"></circle>
+				  </svg>
 			</article>
 			<article class="item-b">
 				<img src="img/dr-strange2.jpg" alt="">
 				<div class="titular">
-					<h3>El Multiverso De La Locura Llega A Disney+</h3>
+					<h3><a href="articulo.html">El Multiverso De La Locura Llega A Disney+</a></h3>
 				</div>
 			</article>
 			<article class="item-c">
 				<img src="img/arrowverse.jpg" alt="">
 				<div class="titular">
-					<h3>El Arrowverso En Peligro Tras Cancelación De "Batwoman" Y "Legends Of Tomorrow"</h3>
+					<h3><a href="articulo.html">El Arrowverso En Peligro Tras Cancelación De "Batwoman" Y "Legends Of Tomorrow"</a></h3>
 				</div>
 			</article>
 			<article class="item-d">
 				<img src="img/avatar.jpg" alt="">
 				<div class="titular">
-					<h3>Avatar 2 Tiene El Segundo Trailer Mas Visto De La Historia</h3>
+					<h3><a href="articulo.html">Avatar 2 Tiene El Segundo Trailer Mas Visto De La Historia</a></h3>
 				</div>
 					
 			</article>
 			<article class="item-e">
 				<img src="img/the-witcher.jpg" alt="">
 				<div class="titular">
-					<h3>The Witcher 3 Ya Tiene Fecha De Lazamiento Para PS5 Y Xbox Series</h3>
+					<h3><a href="articulo.html">The Witcher 3 Ya Tiene Fecha De Lazamiento Para PS5 Y Xbox Series</a></h3>
 				</div>
-					
+				<svg class="reseña-porcentaje" width="80" height="80">
+					<circle r="30" cx="40" cy="40" class="track"></circle>
+					<text x="40" y="47" >7.5</text>
+					<circle r="30" cx="40" cy="40" class="progress"></circle>
+				  </svg>
 			</article>
 		</section>
 
@@ -93,7 +107,7 @@
 						<img src="img/hawkeye.jpg" alt="">
 					</figure>
 					<div class="metainfo">
-						<h3 class="min-titulo">Marvel Studios Comienza El Desarrollo De La Segunda Temporada De Hawkeye</h3>
+						<h3 class="min-titulo"><a href="articulo.html">Marvel Studios Comienza El Desarrollo De La Segunda Temporada De Hawkeye</a></h3>
 						<div class="meta-tags">
 							<span><i class="fa-solid fa-user"></i>Cosme Fulanito</span>
 							<span><i class="fa-solid fa-calendar"></i>19 mayo 2022</span>
@@ -113,7 +127,7 @@
 					</figure>
 					
 					<div class="metainfo">
-						<h3 class="min-titulo">El Final De La Temporada 4 De Stranger Things Durará Mas De 2 Horas</h3>
+						<h3 class="min-titulo"><a href="articulo.html">El Final De La Temporada 4 De Stranger Things Durará Mas De 2 Horas</a></h3>
 						<div class="meta-tags">
 							<span><i class="fa-solid fa-user"></i>Cosme Fulanito</span>
 							<span><i class="fa-solid fa-calendar"></i>19 mayo 2022</span>
@@ -132,7 +146,7 @@
 						<img src="img/robocop-fortnite.jpg" alt="">
 					</figure>
 					<div class="metainfo">
-						<h3 class="min-titulo">Robocop Tendrá Su Propia Skin En Fortnite</h3>
+						<h3 class="min-titulo"><a href="articulo.html">Robocop Tendrá Su Propia Skin En Fortnite</a></h3>
 						<div class="meta-tags">
 							<span><i class="fa-solid fa-user"></i>Cosme Fulanito</span>
 							<span><i class="fa-solid fa-calendar"></i>19 mayo 2022</span>
@@ -151,7 +165,7 @@
 						<img src="img/amber-heard.jpg" alt="">
 					</figure>
 					<div class="metainfo">
-						<h3 class="min-titulo">Amber Heard Podría Interpretar Por Ultima Vez A "Mera" En "Aquaman 2"</h3>
+						<h3 class="min-titulo"><a href="articulo.html">Amber Heard Podría Interpretar Por Ultima Vez A "Mera" En "Aquaman 2"</a></h3>
 						<div class="meta-tags">
 							<span><i class="fa-solid fa-user"></i>Cosme Fulanito</span>
 							<span><i class="fa-solid fa-calendar"></i>19 mayo 2022</span>
@@ -264,4 +278,5 @@
 <script src="./js/script.js"></script> 
 </body>
 </html>
+
 
