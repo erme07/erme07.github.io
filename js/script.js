@@ -67,7 +67,8 @@ closeBtn.addEventListener("click", () => {
 //verificar en que pagina de la web estoy
 
 function filename(){
-  var rutaAbsoluta = self.location.href;   
+  var rutaAbsoluta = self.location.href;
+	console.log(rutaAbsoluta);
   var posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
   var rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length );
   return rutaRelativa;
