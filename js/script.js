@@ -68,7 +68,6 @@ closeBtn.addEventListener("click", () => {
 
 function filename(){
   var rutaAbsoluta = self.location.href;
-	console.log(rutaAbsoluta);
   var posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
   var rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length );
   return rutaRelativa;
