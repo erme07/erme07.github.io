@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="icon" href="img/favicon.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Khand:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+	
+	<script src="https://kit.fontawesome.com/768709101c.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/estilos.css">
+
+	<title>ZonaGeek</title>
+</head>
+<body>
+    <div class="contenedor-contacto">
+        <header class="header">
+			<div class="logo">
+				<img src="img/zonageek-logo.png">
+			</div>
+			<div class="barra-container">
+				<nav class="barra-navegacion">
+					<div class="btn cerrar-menu">
+						<i class="fas fa-times close-btn"></i>
+					</div>
+					<div class="logo-sticky">
+						<a href="index.html"><img src="img/zonageek-logo-min.png"></a>
+					</div>
+					<ul class="menu">
+						<li><a href="index.html">Inicio</a></li>
+						<li><a href="noticias.html">Noticias</a></li>
+						<li><a href="#">Reseñas</a></li>
+						<li><a href="#">Redactores</a></li>
+						<li><a href="contacto.html">Contacto</a></li>
+					</ul>
+					
+					<div class="modo-oscuro">
+						<label class="switch">
+							<input type="checkbox" id="slider" checked>
+							<span class="slider"></span>
+						</label>
+					</div>
+
+					<div class="btn abrir-menu">
+						<i class="fas fa-bars menu-btn"></i>
+					</div>
+				</nav>
+				
+			</div>
+			
+		</header>
+
+        <main class="contacto">
+            <article>
+				
+				<form action="" class="formulario" id="formulario">
+					<!-- Grupo: Nombre -->
+					<div class="formulario-grup" id="grup-nombre">
+						<label for="nombre" class="formulario-label">Nombre</label>
+						<div class="formulario-grup-input">
+							<input type="text" class="formulario-input" name="nombre" id="nombre" placeholder="Juan Perez">
+							<i class="formulario-validacion-estado fas fa-times-circle"></i>
+						</div>
+						<p class="formulario-input-error">Ingrese un nombre válido</p>
+					</div>
+					<!-- Grupo: Correo Electronico -->
+					<div class="formulario-grup" id="grup-correo">
+						<label for="correo" class="formulario-label">Correo Electrónico</label>
+						<div class="formulario-grup-input">
+							<input type="email" class="formulario-input" name="correo" id="correo" placeholder="correo@correo.com">
+							<i class="formulario-validacion-estado fas fa-times-circle"></i>
+						</div>
+						<p class="formulario-input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+					</div>
+					<div class="formulario-grup">
+						<label for="mensaje" class="formulario-label">Mensaje</label>
+						<textarea class="formulario-input" name="mensaje" id="mensaje" placeholder="Mensaje..."></textarea>
+					</div>
+					
+					<div class="formulario-mensaje" id="formulario-mensaje">
+						<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+					</div>
+					<div class="formulario-grup formulario-grup-btn-enviar">
+						<button type="submit" class="formulario-btn">Enviar</button>
+						<p class="formulario-mensaje-exito" id="formulario-mensaje-exito">Formulario enviado exitosamente!</p>
+					</div>
+
+				</form>
+
+            </article>
+            <section class="container-error" >
+				<img id="imagen-error" src="" alt="">
+			</section>
+        </main>
+
+
+        <aside class="sidebar">
+            <section class="widget-social">
+				<div class="fbk"><i class="fa-brands fa-facebook-f"></i></div>
+				<div class="twttr"><i class="fa-brands fa-twitter"></i></div>
+				<div class="ytb"><i class="fa-brands fa-youtube"></i></div>
+			</section>
+			<div class="titulo_seccion">
+				<h4>reseñas</h4>
+			</div>
+			<section class="widget">
+				<article class="review-item">
+					<figure class="miniatura-rev">
+						<img src="img/miniaturas/resena-b-min.jpg" alt="">
+					</figure>
+					<div>
+						<h4>Reseña | La Leyenda De Vox Machina</h4>
+						<span class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+							<i class="fa-regular fa-star"></i>
+						</span>
+					</div>
+				</article>
+				<article class="review-item">
+					<figure class="miniatura-rev">
+						<img src="img/miniaturas/resena-a-min.jpg" alt="">
+					</figure>
+					<div>
+						<h4>Reseña | The Boys: Diabolical</h4>
+						<span class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</span>
+					</div>
+				</article>
+				<article class="review-item">
+					<figure class="miniatura-rev">
+						<img src="img/miniaturas/resena-c-min.jpg" alt="">
+					</figure>
+					<div>
+						<h4>Reseña | Cuphead, Serie Animada</h4>
+						<span class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</span>
+					</div>
+				</article>
+				<article class="review-item">
+					<figure class="miniatura-rev">
+						<img src="img/miniaturas/resena-d-min.jpg" alt="">
+					</figure>
+					<div>
+						<h4>Reseña | Love, Death + Robots</h4>
+						<span class="rating">
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star"></i>
+							<i class="fa-solid fa-star-half-stroke"></i>
+						</span>
+					</div>
+				</article>
+			</section>
+        </aside>
+
+        <footer class="footer">
+            <p>ZonaGeek - 2022</p>
+			<div class="footer_social">
+				<i class="fa-brands fa-facebook-f"></i>
+				<i class="fa-brands fa-twitter"></i>
+				<i class="fa-brands fa-youtube"></i>
+				<i class="fa-brands fa-instagram"></i>
+			</div>
+        </footer>
+        
+
+
+    </div>
+    <script src="./js/script.js"></script>
+	<script src="./js/validacion.js"></script> 
+</body>
+</html>
