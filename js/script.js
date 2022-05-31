@@ -57,32 +57,58 @@ var closeBtn = document.querySelector('.close-btn');
 
 menuBtn.addEventListener("click", () => {
   barraMenu.classList.add('active');
+  var x = window.scrollX;
+  var y = window.scrollY;
+  window.onscroll = function(){ window.scrollTo(x, y) };
 });
 
 closeBtn.addEventListener("click", () => {
   barraMenu.classList.remove('active');
+  window.onscroll = null;
 });
 
 
 //verificar en que pagina de la web estoy
 
 function filename(){
-  var rutaAbsoluta = self.location.href;
+  var rutaAbsoluta = self.location.href;   
+  console.log(rutaAbsoluta);
   var posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
   var rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length );
   return rutaRelativa;
 }
 	var nombre_archivo = filename();
 
-var rutAbsoluta = self.location.href;
+
 	if(nombre_archivo === 'contacto.html'){
     barraMenu.classList.add('select-contacto');
   }
-  if(nombre_archivo === 'index.html' || rutAbsoluta === 'https://erme07.github.io/'){
+  if(nombre_archivo === 'index.html'){
     barraMenu.classList.add('select-inicio');
+    //animacion de porcentajes en reseñas
+    let numero = document.getElementsByName("puntaje");
+    let count=5;
+    console.log(numero);
+    setInterval(() =>{
+        if(count<85){
+            count+=5;
+            if(count<51){
+                numero[1].innerHTML=((count/10)).toFixed(1);
+            }
+            numero[0].innerHTML=((count/10)).toFixed(1);
+        }else{
+            clearInterval();
+        }
+    },100);
   }
   if(nombre_archivo === 'noticias.html'){
     barraMenu.classList.add('select-noticias');
+  }
+  if(nombre_archivo === 'resenias.html'){
+    barraMenu.classList.add('select-resenias');
+  }
+  if(nombre_archivo === 'redactores.html'){
+    barraMenu.classList.add('select-redactores');
   }
   
 
@@ -102,24 +128,3 @@ slider.addEventListener('click', ()  => {
 });
 
 setTheme(localStorage.getItem('theme') || preferedColorScheme);
-
-
-//circulo review
-
-let progressCircle = document.querySelector(".progress");
-    let radius = progressCircle.r.baseVal.value;
-    //circumference of a circle = 2πr;
-    let circumference = radius * 2 * Math.PI;
-    progressCircle.style.strokeDasharray = circumference;
-
-    //0 to 100
-  let porcentaje = 65;
-
-    setProgress(porcentaje);
-
-    function setProgress(percent) {
-        progressCircle.style.strokeDashoffset = circumference - (percent / 100) * circumference;
-    }
-
-    let textoPorcentaje = document.querySelector(".reseña-porcentaje text")
-     textoPorcentaje.innerHTML = (porcentaje/10);
