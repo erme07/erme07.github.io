@@ -5,10 +5,21 @@
 	
 }
 
-a{
-	text-decoration: none;
-	color:unset;
+:root{
+    --porciento: 188.496;
+    --noventacinco:9.4248;
+    --noventa:18.8496;
+    --ochentacinco:28.2744;
+    --ochenta:37.6992;
+    --setentacinco:47.124;
+    --setenta:56.5488;
+    --sesentacinco:65.9736;
+    --sesenta:75.3984;
+    --cincuentacinco:84.8232;
+    --cincuenta:94.248;
+    --veinticinco:141.372;
 }
+
 
 [data-theme="light"] {
     --primary: #F66B0E;
@@ -18,6 +29,7 @@ a{
 	--texto:#222222;
     --titulos: #111111;
 	--bordeSeparadores: #c9c9c9;
+	--hoverMenu:#112b3c;
 
 }
 
@@ -30,6 +42,12 @@ a{
     --titulos: #fff;
 	--bordeSeparadores:#0a0a0a;
 	--timeline:#999999;
+	--hoverMenu:#205375;
+}
+
+a{
+	text-decoration: none;
+	color:unset;
 }
 
 h1,h2,h3,h4{
@@ -174,7 +192,8 @@ body {
 
 .scroll-arriba .logo-sticky, .scroll-abajo .logo-sticky{
 	display:block;
-	margin-left: 30px
+	margin-left: 30px;
+	margin-top: 4px;
 }
 
 .menu{
@@ -183,11 +202,13 @@ body {
 	margin-left:20px;
 	flex-basis:950px;
 }
+.menu li:hover{
+	background-color: var(--hoverMenu);
+}
 .menu a {
 	font-family: 'open sans', sans-serif;
     font-size: 1.4rem;
 	color:white;
-	/*background-color:#ef660f;*/
     text-decoration: none;
 	line-height: 4.8rem;
 	font-weight: 700;
@@ -197,19 +218,19 @@ body {
 }
 
 .select-inicio ul li:nth-child(1){
-	background-color: #F66B0E!important;
+	background-color: var(--primary);
 }
 .select-noticias ul li:nth-child(2){
-	background-color: #F66B0E!important;
+	background-color: var(--primary);
 }
-.select-reseñas ul li:nth-child(3){
-	background-color: #F66B0E!important;
+.select-resenias ul li:nth-child(3){
+	background-color: var(--primary);
 }
 .select-redactores ul li:nth-child(4){
-	background-color: #F66B0E!important;
+	background-color: var(--primary);
 }
 .select-contacto ul li:nth-child(5){
-	background-color: #F66B0E!important;
+	background-color: var(--primary);
 }
 
 .btn{
@@ -391,6 +412,7 @@ body {
     -webkit-transition: .4s;
     transition: .4s;
     border-radius: 50%;
+	z-index: 10;
 }
   
 input:checked + .slider {
@@ -404,6 +426,104 @@ input:checked + .slider:before {
 }
 
 
+/*reseñas----------*/
+
+.reseñas{
+	display:grid;
+	grid-gap:10px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto;
+}
+
+.reseña-item{
+	min-height:200px;
+	
+	
+	padding-bottom:10px;
+	position:relative;
+}
+.reseña-item h3{
+	text-align: center;
+	font-family: 'khand', sans-serif;
+	margin:0px 5px;
+	font-size:1.9rem;
+	line-height: 2.4rem;
+	color: var(--titulos);
+}
+.img-reseña{
+	height:200px;
+	border:1px solid black;
+	margin-bottom:10px;
+}
+
+.reseña-porcentaje{
+	position:absolute;
+	top:5px;
+	right:5px;
+	background-color: rgba(0,0,0,.7);
+    border-radius: 50%;
+}
+
+text{
+	    /* color: blue!important; */
+    /* -webkit-text-stroke-color: blue; */
+    fill: white;
+    font-size: 25px;
+    text-anchor: middle;
+}
+
+.track {
+	/*stroke-width: 1;
+	stroke: lightgrey;*/
+	fill: rgba(0, 0, 0, 0.7);
+}
+
+.progreso {
+	stroke-width: 8;
+	/*stroke-linecap: round;*/
+	fill: none;
+	transform: rotate(270deg);
+	transform-origin: center;
+	stroke-dasharray: 188.496;
+	stroke-dashoffset: 188.496;
+}
+
+.noventa{
+    animation: noven 1700ms linear forwards;
+}
+.noventacinco{
+	animation: novent 1700ms linear forwards;
+	stroke:#00920c
+}
+
+.ochentacinco{
+    animation: ochen 2000ms linear forwards;
+	stroke:#00920c;
+}
+.ochenta{
+	animation: ochent 2000ms linear forwards;
+	stroke:#00920c;
+}
+.setentacinco{
+    animation: seten 1400ms linear forwards;
+	stroke:#00920c;
+}
+.sesentacinco{
+	animation: sesen 1400ms linear forwards;
+	stroke:#849200;
+}
+.cincuenta{
+	animation: cincu 1200ms linear forwards;
+	stroke:rgb(255, 60, 0);
+}
+
+@keyframes novent{100%{stroke-dashoffset: var(--noventacinco);}}
+@keyframes noven{100%{stroke-dashoffset: var(--noventa);}}
+@keyframes ochen{100%{stroke-dashoffset: var(--ochentacinco);}}
+@keyframes ochent{100%{stroke-dashoffset: var(--ochenta);}}
+@keyframes seten{100%{stroke-dashoffset: var(--setentacinco);}}
+@keyframes sesen{100%{stroke-dashoffset: var(--sesentacinco);}}
+@keyframes cincu {100%{stroke-dashoffset: var(--cincuenta);}}
 
 
 /*------------------*/
@@ -421,47 +541,16 @@ input:checked + .slider:before {
 						 "comentarios comentarios";
 }
 
-.filtro{
-	border:1px solid black;
-	padding:2px;
-	margin-bottom:3px;
-	border: radius 3px;
-}
 
-.cartelera{
-	background-color: grey;
-	height:350px;
-	padding:20px;
-	margin-left:-20px;
-	margin-right:-20px;
-	margin-top:15px;
-	/*margin:20px auto;*/
-	position:relative;
-}
-
-
-.miniatura img{
+.miniatura img, .miniatura-rev img, .img-reseña img{
 	width: 100%;
 	height: auto;
 }
 @supports(object-fit: cover){
-	.miniatura img{
+	.miniatura img, .miniatura-rev img, .img-reseña img{
 		height: 100%;
 		object-fit: cover;
 		object-position: center center;
-	}
-}
-
-.miniatura-rev img{
-	width:100%;
-	height:auto;
-}
-
-@supports(object-fit: cover){
-	.miniatura-rev img{
-		height:100%;
-		object-fit: cover;
-		object-position: center center;;
 	}
 }
 
@@ -1006,41 +1095,6 @@ blockquote:after  { content: close-quote; }
 /*///////////////////////////////////////////////////////////////////////*/
 /*///////////////////////////////////////////////////////////////////////*/
 
-.reseña-porcentaje{
-	position:absolute;
-	top:5px;
-	right:5px;
-	background-color: rgba(0,0,0,.7);
-    border-radius: 50%;
-}
-
-text{
-	    /* color: blue!important; */
-    /* -webkit-text-stroke-color: blue; */
-    fill: white;
-    font-size: 25px;
-    text-anchor: middle;
-}
-
-.track {
-	/*stroke-width: 1;
-	stroke: lightgrey;*/
-	fill: rgba(0, 0, 0, 0.7);
-}
-
-.progress {
-	stroke-width: 8;
-	stroke: rgb(255, 0, 0);
-	/*stroke-linecap: round;*/
-	fill: none;
-	transform: rotate(270deg);
-	transform-origin: center;
-}
-
-
-
-
-
 
 
 
@@ -1282,8 +1336,18 @@ text{
 		position:unset;
 		top:unset;
 	}
+	.reseñas{
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+	}
+	.reseña-item{
+		width:100%;
+		height:unset;
 
-
+	}
+	.img-reseña{
+		height:50vw;
+	}
 	.footer{
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1.5fr 0.5fr;
@@ -1380,6 +1444,9 @@ text{
 		position:unset;
 		top:unset;
 	}
+	.img-reseña{
+		height:150px;
+	}
 
 }
 
@@ -1423,10 +1490,10 @@ text{
 		font-size: 1.4rem;
 	}
 	.sidebar{
-		width:300px;
+		width:270px;
+	}
+
+	.img-reseña{
+		height:150px;
 	}
 }
-
-
-
-
