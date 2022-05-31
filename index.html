@@ -31,8 +31,8 @@
 					<ul class="menu">
 						<li><a href="index.html">Inicio</a></li>
 						<li><a href="noticias.html">Noticias</a></li>
-						<li><a href="#">Reseñas</a></li>
-						<li><a href="#">Redactores</a></li>
+						<li><a href="resenias.html">Reseñas</a></li>
+						<li><a href="redactores.html">Redactores</a></li>
 						<li><a href="contacto.html">Contacto</a></li>
 					</ul>
 
@@ -53,44 +53,44 @@
 
 		<section class="portada">
 			<article class="item-a">
-				<img src="img/loki-season2.jpg" alt="">
+				<a href="articulo.html"><img src="img/loki-season2.jpg" alt=""></a>
 				<div class="titular">
 					<h3><a href="articulo.html">La Segunda Temporada De Loki Está Lista Para Comenzar A Rodarse En El Mes De Junio</a></h3>
 				</div>
-				<svg class="reseña-porcentaje" width="80" height="80">
-					<circle r="30" cx="40" cy="40" class="track"></circle>
-					<text x="40" y="47" >7.5</text>
-					<circle r="30" cx="40" cy="40" class="progress"></circle>
-				  </svg>
 			</article>
 			<article class="item-b">
 				<img src="img/dr-strange2.jpg" alt="">
 				<div class="titular">
-					<h3><a href="articulo.html">El Multiverso De La Locura Llega A Disney+</a></h3>
+					<h3>Reseña | Dr. Strange In The Multiverse Of Madness</h3>
 				</div>
+				<svg class="reseña-porcentaje" width="80" height="80">
+					<circle r="30" cx="40" cy="40" class="track"></circle>
+					<text x="40" y="47" name="puntaje"></text>
+					<circle r="30" cx="40" cy="40" class="progreso ochentacinco"></circle>
+				  </svg>
 			</article>
 			<article class="item-c">
 				<img src="img/arrowverse.jpg" alt="">
 				<div class="titular">
-					<h3><a href="articulo.html">El Arrowverso En Peligro Tras Cancelación De "Batwoman" Y "Legends Of Tomorrow"</a></h3>
+					<h3>El Arrowverso En Peligro Tras Cancelación De "Batwoman" Y "Legends Of Tomorrow"</h3>
 				</div>
 			</article>
 			<article class="item-d">
 				<img src="img/avatar.jpg" alt="">
 				<div class="titular">
-					<h3><a href="articulo.html">Avatar 2 Tiene El Segundo Trailer Mas Visto De La Historia</a></h3>
+					<h3>Avatar 2 Tiene El Segundo Trailer Mas Visto De La Historia</h3>
 				</div>
 					
 			</article>
 			<article class="item-e">
-				<img src="img/the-witcher.jpg" alt="">
+				<img src="img/reseña-morbius.jpg" alt="">
 				<div class="titular">
-					<h3><a href="articulo.html">The Witcher 3 Ya Tiene Fecha De Lazamiento Para PS5 Y Xbox Series</a></h3>
+					<h3>Reseña | Morbius, The Living Vampire</h3>
 				</div>
 				<svg class="reseña-porcentaje" width="80" height="80">
 					<circle r="30" cx="40" cy="40" class="track"></circle>
-					<text x="40" y="47" >7.5</text>
-					<circle r="30" cx="40" cy="40" class="progress"></circle>
+					<text x="40" y="47" name="puntaje"></text>
+					<circle r="30" cx="40" cy="40" class="progreso cincuenta"></circle>
 				  </svg>
 			</article>
 		</section>
@@ -107,7 +107,7 @@
 						<img src="img/hawkeye.jpg" alt="">
 					</figure>
 					<div class="metainfo">
-						<h3 class="min-titulo"><a href="articulo.html">Marvel Studios Comienza El Desarrollo De La Segunda Temporada De Hawkeye</a></h3>
+						<h3 class="min-titulo">Marvel Studios Comienza El Desarrollo De La Segunda Temporada De Hawkeye</h3>
 						<div class="meta-tags">
 							<span><i class="fa-solid fa-user"></i>Cosme Fulanito</span>
 							<span><i class="fa-solid fa-calendar"></i>19 mayo 2022</span>
@@ -127,7 +127,7 @@
 					</figure>
 					
 					<div class="metainfo">
-						<h3 class="min-titulo"><a href="articulo.html">El Final De La Temporada 4 De Stranger Things Durará Mas De 2 Horas</a></h3>
+						<h3 class="min-titulo">El Final De La Temporada 4 De Stranger Things Durará Mas De 2 Horas</h3>
 						<div class="meta-tags">
 							<span><i class="fa-solid fa-user"></i>Cosme Fulanito</span>
 							<span><i class="fa-solid fa-calendar"></i>19 mayo 2022</span>
@@ -146,7 +146,7 @@
 						<img src="img/robocop-fortnite.jpg" alt="">
 					</figure>
 					<div class="metainfo">
-						<h3 class="min-titulo"><a href="articulo.html">Robocop Tendrá Su Propia Skin En Fortnite</a></h3>
+						<h3 class="min-titulo">Robocop Tendrá Su Propia Skin En Fortnite</h3>
 						<div class="meta-tags">
 							<span><i class="fa-solid fa-user"></i>Cosme Fulanito</span>
 							<span><i class="fa-solid fa-calendar"></i>19 mayo 2022</span>
@@ -165,7 +165,7 @@
 						<img src="img/amber-heard.jpg" alt="">
 					</figure>
 					<div class="metainfo">
-						<h3 class="min-titulo"><a href="articulo.html">Amber Heard Podría Interpretar Por Ultima Vez A "Mera" En "Aquaman 2"</a></h3>
+						<h3 class="min-titulo">Amber Heard Podría Interpretar Por Ultima Vez A "Mera" En "Aquaman 2"</h3>
 						<div class="meta-tags">
 							<span><i class="fa-solid fa-user"></i>Cosme Fulanito</span>
 							<span><i class="fa-solid fa-calendar"></i>19 mayo 2022</span>
@@ -185,6 +185,7 @@
 		</main>
 		<aside class="sidebar">
 			<!-- Pendiente: hacer el sidebar pagajoso-->
+			
 			<section class="widget-social">
 				<div class="fbk"><i class="fa-brands fa-facebook-f"></i></div>
 				<div class="twttr"><i class="fa-brands fa-twitter"></i></div>
@@ -263,6 +264,7 @@
 					frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 					allowfullscreen></iframe>
 			</section>
+		
 		</aside>
 		<footer class="footer">
 			<p>ZonaGeek - 2022</p>
@@ -278,5 +280,3 @@
 <script src="./js/script.js"></script> 
 </body>
 </html>
-
-
