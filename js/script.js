@@ -70,9 +70,9 @@ closeBtn.addEventListener("click", () => {
 
 //verificar en que pagina de la web estoy
 
+var rutaAbsoluta = self.location.href; 
+console.log(rutaAbsoluta);
 function filename(){
-  var rutaAbsoluta = self.location.href;   
-  console.log(rutaAbsoluta);
   var posicionUltimaBarra = rutaAbsoluta.lastIndexOf("/");
   var rutaRelativa = rutaAbsoluta.substring( posicionUltimaBarra + "/".length , rutaAbsoluta.length );
   return rutaRelativa;
@@ -83,7 +83,7 @@ function filename(){
 	if(nombre_archivo === 'contacto.html'){
     barraMenu.classList.add('select-contacto');
   }
-  if(nombre_archivo === 'index.html'){
+  if(nombre_archivo === 'index.html'|| rutAbsoluta === 'https://erme07.github.io/'){
     barraMenu.classList.add('select-inicio');
     //animacion de porcentajes en reseñas
     let numero = document.getElementsByName("puntaje");
