@@ -110,6 +110,21 @@ function filename(){
   if(nombre_archivo === 'redactores.html'){
     barraMenu.classList.add('select-redactores');
   }
+if(nombre_archivo === 'resenia.html'){
+    //animacion de porcentajes en reseña individual
+    let numero = document.getElementsByName("puntaje");
+    let count=0;
+    console.log(numero);
+    setInterval(() =>{
+      
+        if(count>85){
+          clearInterval();  
+        }else{
+        numero[0].innerHTML=((count/10)).toFixed(1);
+        count+=5;
+        }
+    },100);
+  };
   
 
 
