@@ -516,6 +516,10 @@ text{
 	animation: cincu 1200ms linear forwards;
 	stroke:rgb(255, 60, 0);
 }
+.veintecinco{
+	animation: veint 2200ms linear forwards;
+	stroke:rgb(255, 0, 0);
+}
 
 @keyframes novent{100%{stroke-dashoffset: var(--noventacinco);}}
 @keyframes noven{100%{stroke-dashoffset: var(--noventa);}}
@@ -524,7 +528,7 @@ text{
 @keyframes seten{100%{stroke-dashoffset: var(--setentacinco);}}
 @keyframes sesen{100%{stroke-dashoffset: var(--sesentacinco);}}
 @keyframes cincu {100%{stroke-dashoffset: var(--cincuenta);}}
-
+@keyframes veint{100%{stroke-dashoffset: var(--veinticinco);}}
 
 /*------------------*/
 
