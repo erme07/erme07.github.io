@@ -10,6 +10,7 @@
     --noventacinco:9.4248;
     --noventa:18.8496;
     --ochentacinco:28.2744;
+	--ochentacinco2:51.83625;
     --ochenta:37.6992;
     --setentacinco:47.124;
     --setenta:56.5488;
@@ -487,6 +488,15 @@ text{
 	stroke-dasharray: 188.496;
 	stroke-dashoffset: 188.496;
 }
+.progreso2 {
+	stroke-width: 10;
+	/*stroke-linecap: round;*/
+	fill: none;
+	transform: rotate(270deg);
+	transform-origin: center;
+	stroke-dasharray: 345.575;
+	stroke-dashoffset: 345.575;
+}
 
 .noventa{
     animation: noven 1700ms linear forwards;
@@ -498,6 +508,10 @@ text{
 
 .ochentacinco{
     animation: ochen 2000ms linear forwards;
+	stroke:#00920c;
+}
+.ochentacinco2{
+	animation: ochen2 2000ms linear forwards;
 	stroke:#00920c;
 }
 .ochenta{
@@ -524,12 +538,16 @@ text{
 @keyframes novent{100%{stroke-dashoffset: var(--noventacinco);}}
 @keyframes noven{100%{stroke-dashoffset: var(--noventa);}}
 @keyframes ochen{100%{stroke-dashoffset: var(--ochentacinco);}}
+@keyframes ochen2{100%{stroke-dashoffset: var(--ochentacinco2);}}
 @keyframes ochent{100%{stroke-dashoffset: var(--ochenta);}}
 @keyframes seten{100%{stroke-dashoffset: var(--setentacinco);}}
 @keyframes sesen{100%{stroke-dashoffset: var(--sesentacinco);}}
 @keyframes cincu {100%{stroke-dashoffset: var(--cincuenta);}}
 @keyframes veint{100%{stroke-dashoffset: var(--veinticinco);}}
 
+.reseña-text{
+	font-size: 4.5rem;
+}
 /*------------------*/
 
 .articulo {
