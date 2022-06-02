@@ -143,3 +143,22 @@ slider.addEventListener('click', ()  => {
 });
 
 setTheme(localStorage.getItem('theme') || preferedColorScheme);
+
+//boton para ir  hacia arriba
+
+const boton_arriba = document.getElementById("boton_arriba")
+boton_arriba.addEventListener('click', () => {
+  window.scrollTo(0, 0)
+  body.classList.remove(scrollAbajo);
+})
+
+window.onscroll = () => {
+  mostrar_boton()
+}
+const mostrar_boton = () => {
+  if (window.scrollY < 300) {
+    boton_arriba.classList.remove("volver-arriba-on")
+  } else {
+      boton_arriba.classList.add("volver-arriba-on")
+  }
+}
