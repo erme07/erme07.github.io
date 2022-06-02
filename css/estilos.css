@@ -26,10 +26,12 @@
     --primary: #F66B0E;
     --background: #fff;
 	--background2:#efefef;
+	--backCajaReseña:#dfdfdf;
 	--backBarranav:#205375;
 	--texto:#222222;
     --titulos: #111111;
 	--bordeSeparadores: #c9c9c9;
+	--timeline:#3c3c3c;
 	--hoverMenu:#112b3c;
 
 }
@@ -38,6 +40,7 @@
     --primary: #F66B0E;
     --background: #0c0c0c;
 	--background2:#101010;
+	--backCajaReseña:#0b0b0b;
 	--backBarranav:#112b3c;
 	--texto:#efefef;
     --titulos: #fff;
@@ -498,6 +501,7 @@ text{
 	stroke-dashoffset: 345.575;
 }
 
+
 .noventa{
     animation: noven 1700ms linear forwards;
 }
@@ -514,6 +518,7 @@ text{
 	animation: ochen2 2000ms linear forwards;
 	stroke:#00920c;
 }
+
 .ochenta{
 	animation: ochent 2000ms linear forwards;
 	stroke:#00920c;
@@ -527,7 +532,7 @@ text{
 	stroke:#849200;
 }
 .cincuenta{
-	animation: cincu 1200ms linear forwards;
+	animation: cincu 2200ms linear forwards;
 	stroke:rgb(255, 60, 0);
 }
 .veintecinco{
@@ -844,7 +849,7 @@ textarea.formulario-input{
 /*cuerpo del artiuclo*/
 
 .texto{
-    padding:10px;
+    padding:10px 0px 10px 10px;
 }
 .texto p{
     font-family: 'Verdana' sans-serif;
@@ -883,7 +888,7 @@ blockquote:after  { content: close-quote; }
 	margin-bottom: 20px;
 }
 
-.widget-trailer, .video{
+.video{
 	position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px;
@@ -910,7 +915,7 @@ blockquote:after  { content: close-quote; }
 
 .autor{
 	text-align: center;
-	padding-top:20px;
+	padding:20px 10px;
 }
 .autor-sticky{
 	position:sticky;
@@ -934,6 +939,53 @@ blockquote:after  { content: close-quote; }
 
 
 
+
+/*cuerpo de reseña*/
+
+.alinear-izq img{
+	float:left;
+	margin-right:15px;
+	margin-bottom: 10px;
+	width:50%;
+}
+.alinear-der img{
+	float:right;
+	margin-left:15px;
+	margin-bottom: 10px;
+	width:50%;
+}
+
+.caja-puntaje{
+	display:grid;
+	grid-template-columns: 1fr 150px;
+	padding: 20px 10px;
+    justify-items: center;
+	align-items: center;
+	border-top:1px solid var(--bordeSeparadores);
+	background-color: var(--backCajaReseña);
+	margin-bottom: 10px;
+}
+
+.caja-puntaje h4{
+	text-transform: uppercase;
+    padding: 5px;
+    background-color: var(--primary);
+    display: inline-block;
+    margin-bottom: 10px;
+	color:#111111;
+}
+.caja-puntaje p{
+	margin-bottom: 0px;
+}
+
+
+.reseña-puntuacion span{
+	border: 1px solid var(--texto);
+	color:var(--titulos);
+    padding: 30px;
+	display:block;
+	font-size: 4rem;
+}
 
 
 
@@ -986,6 +1038,7 @@ blockquote:after  { content: close-quote; }
 	display:flex;
 	flex-direction: column;
 	font-size: 1.5rem;
+	margin-bottom: 10px;
 }
 .review-item{
 	display:grid;
@@ -1009,12 +1062,13 @@ blockquote:after  { content: close-quote; }
 }
 
 
-.widget-trailer, .video{
+.widget-trailer{
 	position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px;
     height: 0;
     overflow: hidden;
+	margin-bottom: 15px;
 }
 
 .widget-trailer iframe, .video iframe{
@@ -1301,6 +1355,23 @@ blockquote:after  { content: close-quote; }
 							 "autor"
 							 "relacionados"
 							 "comentarios";
+	}
+
+
+	.caja-puntaje{
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+	}
+
+	.alinear-der img, .alinear-izq img{
+		display:block;
+		float:unset;
+		margin:10px auto 20px;
+		width:90%;
+	}
+	.caja-puntaje div{
+		text-align: center;
+    	margin-bottom: 15px;
 	}
 
 	.contacto{
