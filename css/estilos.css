@@ -72,6 +72,25 @@ body {
 	
 }
 
+.volver-arriba{
+	position:fixed;
+	bottom:5px;
+	right:5px;
+    	color: #1c1c1c;
+    	font-size: 3rem;
+    	font-weight: bolder;
+    	background-color: var(--primary);
+   	padding: 0px 5px;
+   	border-radius: 5px;
+	cursor:pointer;
+	transform: translateY(100px);
+  	transition: 0.3s;
+}
+
+.volver-arriba-on {
+	transform: translateY(0);
+}
+
 .contenedor,
 .contenedor-articulo,
 .contenedor-contacto,
