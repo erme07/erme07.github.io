@@ -101,7 +101,7 @@ function filename(){
         }
     },100);
   }
-  if(nombre_archivo === 'noticias.html'){
+  if(nombre_archivo === 'noticias.html' || nombre_archivo === 'articulo.html'){
     barraMenu.classList.add('select-noticias');
   }
   if(nombre_archivo === 'resenias.html'){
@@ -111,6 +111,7 @@ function filename(){
     barraMenu.classList.add('select-redactores');
   }
 if(nombre_archivo === 'resenia.html'){
+    barraMenu.classList.add('select-resenias');
     //animacion de porcentajes en reseña individual
     let numero = document.getElementsByName("puntaje");
     let count=0;
