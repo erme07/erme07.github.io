@@ -87,7 +87,6 @@ function filename(){
     //animacion de porcentajes en reseñas
     let numero = document.getElementsByName("puntaje");
     let count=5;
-    console.log(numero);
     setInterval(() =>{
         if(count<85){
             count+=5;
@@ -114,7 +113,6 @@ if(nombre_archivo === 'resenia.html'){
     //animacion de porcentajes en reseña individual
     let numero = document.getElementsByName("puntaje");
     let count=0;
-    console.log(numero);
     setInterval(() =>{
       
         if(count>85){
