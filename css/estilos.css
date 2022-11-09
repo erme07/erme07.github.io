@@ -1275,7 +1275,8 @@ blockquote:after  { content: close-quote; }
 		display:block;
 	}
 
-	.barra-navegacion {  display: grid;
+	.barra-navegacion {  
+		display: grid;
 		width:100%;
 		grid-template-columns: 50px auto 50px;
 		grid-template-rows: 50px auto 50px;
@@ -1284,7 +1285,7 @@ blockquote:after  { content: close-quote; }
 		transition-property: top;
 		transition-duration: 0.4s;
 		position: absolute;
-   		top: -452px;
+		top: -452px;
 		gap: 0px 0px;
 		grid-auto-flow: row;
 		grid-template-areas:
